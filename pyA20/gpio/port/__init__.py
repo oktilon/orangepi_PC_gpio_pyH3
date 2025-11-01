@@ -2,7 +2,7 @@
 """<Some description>
 """
 
-import < Something >
+# import < Something >
 
 __author__ = "Stefan Mavrodiev"
 __copyright__ = "Copyright 2014, Olimex LTD"
