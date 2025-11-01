@@ -1,15 +1,16 @@
-from distutils.core import setup
-from distutils.core import Extension
-from distutils.command.build_ext import build_ext as _build_ext
+from setuptools import setup
+from setuptools import Extension
+from setuptools.command import build_ext as _build_ext
+
 
 import sys
 
 processor_type = "sun8i"
 
-try:
-    input = raw_input
-except NameError:
-    pass
+# try:
+#     input = raw_input
+# except NameError:
+#     pass
 
 
 def print_color(text):
