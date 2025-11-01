@@ -153,6 +153,5 @@ SPI::
 
 
 It's important that you run your python script as root!
-    
 
-    
+
