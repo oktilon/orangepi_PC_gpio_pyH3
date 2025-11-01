@@ -1,6 +1,6 @@
 from setuptools import setup
 from setuptools import Extension
-from setuptools.command import build_ext as _build_ext
+from setuptools.command.build_ext import build_ext
 
 
 import sys
@@ -74,10 +74,10 @@ def check_processor():
     print_warning()
 
 
-class build_ext(_build_ext):
+class CustomBuildExt(build_ext):
     def run(self):
         check_processor()
-        _build_ext.run(self)
+        build_ext.run(self)
 
 
 modules = [
@@ -114,5 +114,5 @@ setup(
                  'Topic :: Software Development :: Embedded Systems'
     ],
     ext_modules=modules,
-    cmdclass={'build_ext': build_ext}
+    cmdclass={'build_ext': CustomBuildExt}
 )
